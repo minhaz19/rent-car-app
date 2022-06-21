@@ -63,7 +63,7 @@ function Navigation() {
         activeTintColor: "#ECAE36",
         inactiveTintColor: "white",
         tabBarShowLabel: false,
-        keyboardHidesTabBar: true,
+        tabBarHideOnKeyboard: true,
         tabBarStyle: {
           backgroundColor: "#758389",
           borderTopColor: "transparent",
@@ -71,9 +71,6 @@ function Navigation() {
           borderTopLeftRadius: 10,
           borderTopRightRadius: 10,
         },
-      }}
-      tabBarOptions={{
-        keyboardHidesTabBar: true,
       }}
     >
       <Tab.Screen
