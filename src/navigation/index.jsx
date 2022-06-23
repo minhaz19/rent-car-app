@@ -3,62 +3,17 @@ import { Ionicons } from "@expo/vector-icons";
 import { Entypo } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import HomeScreen from "../pages/HomeScreen";
-import DetailsScreen from "../pages/DetailsScreen";
+import BookCar from "../pages/BookCar";
 import NotificationScreen from "../pages/NotificationScreen";
 import ProfileScreen from "../pages/ProfileScreen";
+import HomeStack from "./HomeStack";
 
-const stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
-
-// function HomeStack() {
-//   return (
-//     <stack.Navigator>
-//       <stack.Screen
-//         name="HomeScreen"
-//         component={HomeScreen}
-//         options={{
-//           headerShown: false,
-//         }}
-//       />
-//       <stack.Screen
-//         name="DetailsScreen"
-//         component={DetailsScreen}
-//         options={{
-//           headerShown: false,
-//         }}
-//       />
-//       <stack.Screen
-//         name="DetailsScreen"
-//         component={DetailsScreen}
-//         options={{
-//           headerShown: false,
-//         }}
-//       />
-//       <stack.Screen
-//         name="NotificationScreen"
-//         component={NotificationScreen}
-//         options={{
-//           headerShown: false,
-//         }}
-//       />
-//       <stack.Screen
-//         name="ProfileScreen"
-//         component={ProfileScreen}
-//         options={{
-//           headerShown: false,
-//         }}
-//       />
-//     </stack.Navigator>
-//   );
-// }
 
 function Navigation() {
   return (
     <Tab.Navigator
-      initialRouteName="HomeScreen"
       screenOptions={{
         activeTintColor: "#ECAE36",
         inactiveTintColor: "white",
@@ -74,8 +29,8 @@ function Navigation() {
       }}
     >
       <Tab.Screen
-        name="HomeScreen"
-        component={HomeScreen}
+        name="HomeStack"
+        component={HomeStack}
         options={{
           tabBarLabel: "Home",
           headerShown: false,
@@ -90,8 +45,8 @@ function Navigation() {
         }}
       />
       <Tab.Screen
-        name="DetailsScreen"
-        component={DetailsScreen}
+        name="BookCar"
+        component={BookCar}
         options={{
           headerShown: false,
           tabBarLabel: "Details",

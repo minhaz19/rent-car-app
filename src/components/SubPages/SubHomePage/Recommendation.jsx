@@ -16,9 +16,17 @@ const Recommendation = () => {
         </TouchableOpacity>
       </View>
       <View style={styles.brandList}>
-        <RecommendationCard brand={require("../../../utils/image/big-benz.png")} name={"BMW M21 series"} price={"$200"}/>
         <RecommendationCard
-          brand={require("../../../utils/image/mercedes-2.png")} name={"BMW Hip-Hop Series"} price={"$200"}
+          brand={require("../../../utils/image/big-benz.png")}
+          name={"BMW M21 series"}
+          price={"$200"}
+          route={"BookCar"}
+        />
+        <RecommendationCard
+          brand={require("../../../utils/image/mercedes-2.png")}
+          name={"BMW Hip-Hop Series"}
+          price={"$200"}
+          route={"BookCar"}
         />
       </View>
     </>
