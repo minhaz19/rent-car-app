@@ -5,18 +5,24 @@ import { View, StyleSheet, Image, Text, TouchableOpacity } from "react-native";
 const RecommendationCard = ({ brand, name, price, small }) => {
   const navigation = useNavigation();
   return (
-      <TouchableOpacity
+    <TouchableOpacity
+      style={{
+        paddingVertical: small ? 5 : 10,
+        paddingHorizontal: small ? 5 : 10,
+        width: small ? 140 : "48%",
+        marginRight: small ? 4 : 0,
+      }}
+      onPress={() => navigation.navigate(`BookCar`)}
+    >
+      <View
         style={{
-          borderRadius: small ? 6 : 10,
-          backgroundColor: "#758389",
+          marginTop: 20,
           borderWidth: 1,
+          borderRadius: small ? 6 : 10,
           borderColor: "gray",
-          paddingVertical: small ? 5 : 10,
-          paddingHorizontal: small ? 5 : 10,
-          width: small ? 140 : "48%",
-          marginRight: small ? 4 : 0,
+          backgroundColor: "#758389",
+          height: 120,
         }}
-        onPress={() => navigation.navigate(`BookCar`)}
       >
         <View style={{ justifyContent: "center", alignItems: "center" }}>
           <View
@@ -34,8 +40,8 @@ const RecommendationCard = ({ brand, name, price, small }) => {
           <Text style={{ color: "white", fontSize: 14 }}>{name}</Text>
           <Text style={{ color: "#ECAE36", fontSize: 14 }}>{price}</Text>
         </View>
-      </TouchableOpacity>
-
+      </View>
+    </TouchableOpacity>
   );
 };
 
